@@ -38,12 +38,12 @@ public class EfficientWordMarkov extends WordMarkovModel{
 		 myWords = text.split("\\s+");
 		
 		myWordMap.clear();
-		
-		for(int i=0; i<myWords.length-(myOrder+1);i++) {
+		//hey
+		for(int i=0; i<myWords.length-(myOrder-1);i++) {
 			
 			a = new WordGram(myWords, i, myOrder);
 			
-			if(i==myWords.length-2) {
+			if(i>=myWords.length-(myOrder+1)) {
 				
 				//System.out.println(theWords[i+myOrder]);
 				
