@@ -1,5 +1,7 @@
 import java.util.*;
 
+import javax.swing.plaf.synth.SynthSpinnerUI;
+
 public class WordMarkovModel implements MarkovInterface<WordGram> {
 	
 	protected String[] myWords;
@@ -69,7 +71,7 @@ public class WordMarkovModel implements MarkovInterface<WordGram> {
 		ArrayList<String> sb = new ArrayList<>();
 		int index = myRandom.nextInt(myWords.length - myOrder);
 		WordGram current = new WordGram(myWords,index,myOrder);
-		
+
 		sb.add(current.toString());
 		for(int k=0; k < length-myOrder; k++){
 			ArrayList<String> follows = getFollows(current);
@@ -85,6 +87,8 @@ public class WordMarkovModel implements MarkovInterface<WordGram> {
 			}
 			sb.add(nextItem);
 			current = current.shiftAdd(nextItem); //current.substring(1)+ nextItem;
+			
+
 		}
 		return String.join(" ", sb);
 	}

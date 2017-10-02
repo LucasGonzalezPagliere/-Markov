@@ -38,6 +38,9 @@ public class WordGramTester {
 		assertEquals("eq fail on 0,4",myGrams[0].equals(myGrams[2]),false);
 		assertEquals("eq fail on 2,3",myGrams[2].equals(myGrams[3]),false);
 		assertEquals("eq fail no 2,6",myGrams[2].equals(myGrams[6]),false);
+		System.out.println(myGrams[7]);
+		System.out.println(myGrams[8]);
+
 		assertEquals("eq fail no 7,8",myGrams[7].equals(myGrams[8]),false);
 	}
 
